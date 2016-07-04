@@ -5,7 +5,7 @@ classdef RRSVM_s
     
     
     methods (Static)
-        % Train IR-LSSVM6
+        % Train RRSVM
         % Bs: 1*n cell structure for bags of instances. Bs{i} is a d*m_i matrix for m_i instances
         % lb: n*1 label vector, lb(i) is 1 or -1.
         % lambda: lambda for LSSVM
@@ -28,8 +28,14 @@ classdef RRSVM_s
             BR = cellfun( @(x)sum(x,2),Bs,'UniformOutput', false) ;
             BR=ML_Norm.l2norm( cat(2,BR{:}));
             
+            if isfield(opts,'w') && isfield(opts,'b')
+               w=opts.w;
+               b=opts.b;
+            else
             
             [w,b] = ML_Ridge.ridgeReg(BR, lb, lambda, ones(size(lb)));
+            end
+            
             
             mBR = mean(BR, 2);
             ub4sumQC = sum(sum((BR - repmat(mBR, 1, n)).^2));

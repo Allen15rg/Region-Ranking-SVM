@@ -7,7 +7,12 @@ addpath('~/Dependencies/cplex125/cplex/examples/src/matlab');
 
 
 %% load data
+try
 load('valData.mat');
+catch ME1
+   error('valData not exist, try run createTestData first');
+    
+end
 
 %% Ridge Regression/Least Square SVM:
 %using mean of each bag as represetation
