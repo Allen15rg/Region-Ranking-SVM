@@ -10,4 +10,8 @@ This is the code for the CVPR2016 Paper: Region Ranking SVM for Image Classifica
 ## Files:
 
 1. createTestData.m : creating data to evaluate RRSVM/Ridge Regression
-2. 
+2. demo_L: TODO
+3. demo_S: RRSVM demo for small dataset
+4. demo_ridge: demo for ridge regression
+4. ML_Ridge: ridge Regression
+5. RRSVM_s: code of Region Raning SVM for small scale data
