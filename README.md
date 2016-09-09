@@ -1,5 +1,5 @@
 # Region Ranking SVM for Image Classification
-### Created by Zijun Wei(zijwei@cs.stonybrook.edu)
+### Created by Zijun Wei(http://www.zijunwei.org/)
 
 ## Introduction
 This is the code for the CVPR2016 Paper: Region Ranking SVM for Image Classification. The code is adopted for better readability, if you find problems, please let me know.
